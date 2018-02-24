@@ -8,7 +8,7 @@
     org_target.append(`
       <a class="statistic" href="https://github.com/Sprinqler">
         <div class="value">${org_json.public_repos}</div>
-        <div class="label">Public ${org_json.public_repos & 1 ? "Repo" : "Repos"}</div>
+        <div class="label">Public ${org_json.public_repos - 1 ? "Repos" : "Repo"}</div>
       </a>
     `)
   } else {
@@ -25,7 +25,7 @@
     org_target.append(`
       <a class="statistic" href="https://github.com/orgs/Sprinqler/people">
         <div class="value">${members_json.length}</div>
-        <div class="label">Public ${members_json.length & 1 ? "Member" : "Members"}</div>
+        <div class="label">Public ${members_json.length - 1 ? "Members" : "Member"}</div>
       </a>
     `)
     members_json.forEach(async (member, index, array) => {
@@ -47,10 +47,10 @@
           </div>
           <div class="extra content">
             <span>
-              <i class="list icon"></i>${repos} Repos
+              <i class="list icon"></i>${repos} ${repos - 1 ? "Repos" : "Repo"}
             </span>
             <span class="right floated">
-              <i class="user icon"></i>${followers} Followers
+              <i class="user icon"></i>${followers} ${followers - 1 ? "Followers" : "Follower"}
             </span>
           </div>
         </a>
