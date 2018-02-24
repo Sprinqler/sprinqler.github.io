@@ -1,6 +1,18 @@
 @charset "UTF-8";
 
-body {
-  font-family: 'Noto Sans JP', sans-serif;
+:root main {
   margin: 1em;
 }
+
+:root .center:not(.ui) {
+  text-align: center;
+}
+
+:root .ui.statistics .statistic {
+  margin: 0;
+}
+
+:root #org-container {
+  margin: 2em 0;
+}
+
